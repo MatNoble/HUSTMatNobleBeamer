@@ -14,6 +14,49 @@
 % 2. under the GNU Public License.
 %
 
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+
+%================================== 设置中文字体 ================================%
+\setCJKmainfont[Mapping = fullwidth-stop]{Source Han Sans SC}%------------------------------------------------设置正文为黑体
+\setCJKmonofont{Source Han Serif SC}%-------------------------------------------------设置等距字体
+\setCJKsansfont{KaiTi}%------------------------------------------------设置无衬线字体
+\setCJKfamilyfont{zxzt}{FZShouJinShu-S10S}
+\setCJKfamilyfont{FZDH}{FZDaHei-B02S}
+%================================== 设置中文字体 ================================%
+
+%================================== 设置英文字体 ================================%
+%\setmainfont[Mapping=tex-text]{TeX Gyre Pagella}%--------------------------------英文衬线字体
+\setmainfont[Mapping=tex-text]{Helvetica}%--------------------------------英文衬线字体
+\setsansfont[Mapping=tex-text]{Trebuchet MS}%------------------------------------英文无衬线字体
+\setmonofont[Mapping=tex-text]{Courier New}%-------------------------------------英文等宽字体
+\newfontfamily\Arial{Arial}
+% ================================== 设置英文字体 ================================%
+
+\usepackage{amsthm,amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
+\usepackage{charter}
+\usepackage{helvet}
+\usepackage{color}			 %字体颜色支持
+\usepackage{graphicx,hyperref,url}
+%\hypersetup{colorlinks,linkcolor=red} 
+\usepackage{metalogo}	% 非必须
+\usepackage{tikz}
+\usetikzlibrary{positioning,backgrounds}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadings}
+\usepackage{tabularx,multirow,multicol,longtable}
+\usepackage{tabu}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\small}
+%% 上文引用的包可按实际情况自行增删
+%%%%%%%%%%%%%%%%%%
+
+\beamertemplateballitem		%设置 Beamer 主题
+
+
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%

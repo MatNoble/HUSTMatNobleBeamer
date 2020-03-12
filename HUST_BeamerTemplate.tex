@@ -1,84 +1,26 @@
 %# -*- coding:utf-8 -*-
 \documentclass[10pt,aspectratio=43,serif]{beamer}		
-%设置为 Beamer 文档类型，设置字体为 10pt，长宽比为16:9，字体为 serif 风格
+% 设置为 Beamer 文档类型，设置字体为 10pt，长宽比为16:9，字体为 serif 风格
 
-%%%%-----导入宏包-----%%%%
 \usepackage{matnoble}			%导入 matnoble 模板宏包
-\usepackage{microtype}
-\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
-\usepackage{amsthm,amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
-\usepackage{color}			 %字体颜色支持
-\usepackage{graphicx,hyperref,url}
-%\hypersetup{colorlinks,linkcolor=red} 
-\usepackage{metalogo}	% 非必须
-\usepackage{xunicode}%-----------------------------------------------------------提供Unicode字符宏
-\usepackage{xltxtra}%------------------------------------------------------------提供了针对XeTeX的改进并且加入了XeTeX的LOGO
-\usepackage{tikz}
-\usetikzlibrary{positioning,backgrounds}
-\usetikzlibrary{fadings}
-\usetikzlibrary{patterns}
-\usetikzlibrary{calc}
-\usetikzlibrary{shadings}
-\usepackage{tabularx,multirow,multicol,longtable}
-\usepackage{tabu}
-\setbeamertemplate{caption}[numbered]
-\setbeamerfont{caption}{size=\small}
-%% 上文引用的包可按实际情况自行增删
-%%%%%%%%%%%%%%%%%%	
-
-%================================== 设置中文字体 ================================%
-\setCJKmainfont{Adobe Heiti Std}%------------------------------------------------设置正文为黑体
-\setCJKmonofont{Adobe Song Std}%-------------------------------------------------设置等距字体
-\setCJKsansfont{Adobe Kaiti Std}%------------------------------------------------设置无衬线字体
-\setCJKfamilyfont{zxzt}{FZShouJinShu-S10S}
-\setCJKfamilyfont{FZDH}{FZDaHei-B02S}
-%================================== 设置中文字体 ================================%
-
-%================================== 设置英文字体 ================================%
-%\setmainfont[Mapping=tex-text]{TeX Gyre Pagella}%--------------------------------英文衬线字体
-\setmainfont[Mapping=tex-text]{Helvetica}%--------------------------------英文衬线字体
-\setsansfont[Mapping=tex-text]{Trebuchet MS}%------------------------------------英文无衬线字体
-\setmonofont[Mapping=tex-text]{Courier New}%-------------------------------------英文等宽字体
-\newfontfamily\Arial{Arial}
-%================================== 设置英文字体 ================================%
-
-%================================== 设置数学字体 ================================%
-\usepackage[T1]{fontenc}
-\usepackage{concmath}
-%================================== 设置数学字体 ================================%
-
-\beamertemplateballitem		%设置 Beamer 主题
-
-%%%%------------------------%%%%%
-\catcode`\。=\active         %或者=13
-\newcommand{。}{．}				
-%将正文中的“。”号转换为“.”。中文标点国家规范建议科技文献中的句号用圆点替代
-%%%%%%%%%%%%%%%%%%%%%
 
 %%%%----首页信息设置----%%%%
 \title[ 公众号: 数学家园 ]{华中科技大学 Beamer 模板}
 \subtitle{——这里是副标题}			
 %%%%----标题设置
 
-\author[张\quad 振]{
+\author[数学小兵儿]{
   %\vskip5em
-  张\quad 振 \\
+  Ross \\
   \medskip
-  %{\small \href{mailto:z-matrix@qq.com}{z-matrix@qq.com}} \\
   {\small \href{https://github.com/MatNoble/}{github.com/MatNoble}}
 }
 
-%%%%----个人信息设置
-  
 \institute[HUST]{
-  %偏微分方程数值解 \\ 
-  %\medskip
   {\normalsize 数学与统计学院, 华中科技大学}}
-%%%%----机构信息
 
-\date[Jul. 13 2018]{
-	%\today
-  2018年7月13日
+\date[Mar. 12 2020]{
+	\today
 }
 %%%%----日期信息
   
