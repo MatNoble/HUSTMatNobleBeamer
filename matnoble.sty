@@ -35,7 +35,6 @@
 % ================================== 设置英文字体 ================================%
 
 \usepackage{amsthm,amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
-\usepackage{charter}
 \usepackage{helvet}
 \usepackage{color}			 %字体颜色支持
 \usepackage{graphicx,hyperref,url}
@@ -109,12 +108,12 @@
 \setbeamertemplate{background}{\pgfuseimage{bg}}
 
 % Colors
-\usecolortheme[RGB={0,78,153}]{structure}  %蓝色
-%\usecolortheme[RGB={96,15,15}]{structure} % 红色
+% \usecolortheme[RGB={0,78,153}]{structure}  % 蓝色
+\usecolortheme[RGB={37,85,122}]{structure}   % 华科蓝
+%\usecolortheme[RGB={96,15,15}]{structure}   % 红色
 
 \setbeamercolor{frametitle}{parent=subsection in head/foot}
 \setbeamercolor{frametitle right}{parent=section in head/foot}
-
 
 \pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%
   color(0pt)=(frametitle.bg);
@@ -150,21 +149,21 @@
   \leavevmode%
   \@tempdimb=6.4375ex%
     %\multiply\@tempdimb by\beamer@sectionmax%
-    \pgfdeclareimage[height=\@tempdimb]{logo}{res/matnoble2.png}%
-    \pgfdeclareimage[height=.83\@tempdimb]{title_logo}{res/hust_title.png}%
+    \pgfdeclareimage[height=.1\@tempdimb]{logo}{res/logo1.png}%
+    \pgfdeclareimage[height=.8\@tempdimb]{title_logo}{res/hust_title.png}%
   \logo{\pgfuseimage{logo}}%
   \ifdim\@tempdimb>0pt%
     \advance\@tempdimb by 1.125ex%
-    \begin{beamercolorbox}[wd=.8\paperwidth,ht=\@tempdimb]{section in head/foot}%
+    \begin{beamercolorbox}[wd=.84\paperwidth,ht=\@tempdimb]{section in head/foot}%
       \vbox to\@tempdimb{\vfil\insertsectionnavigationhorizontal{.5\textwidth}{\hskip0pt plus1filll}{}\vfil}%
     \end{beamercolorbox}%
     %% \begin{beamercolorbox}[wd=.4\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
     %%   \vbox to\@tempdimb{\vfil\textbf{\footnotesize\insertshortinstitute~~}\vfil}%
     %% \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.135\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
+    \begin{beamercolorbox}[wd=.165\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
       \vbox to\@tempdimb{\vfil\pgfuseimage{title_logo}\vfil}%
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.065\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
       \vbox to\@tempdimb{\vfil\insertlogo\vfil\vfil}%
     \end{beamercolorbox}%
   \fi%
