@@ -1,42 +1,37 @@
-%% FileName    : matnoble.sty
-%% Author      : Ross <z-matrix@qq.com>
-%% Created     : Fri Jul 13 09:00 2018 by Ross
-%% Copyright   : (c) 2018
+%% FileName    : matnoble-beamer-1.sty
+%% Author      : MatNoble <hustmatnoble@gmail.com>
 %% Description : Beamer for HUST
 %% Time-stamp  : <2018-07-13 09:00>
 %% w 公 众 号   : 数系家园
+%% site        : https://matnoble.me
+%% GitHub      : https://github.com/MatNoble/HUSTMatNobleBeamer
 
-% Copyright 2009 by Pim Vullers
-%
-% This file may be distributed and/or modified
-%
-% 1. under the LaTeX Project Public License and/or
-% 2. under the GNU Public License.
-%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{matnoble-beamer-2}[2020/07/22 v2.0 updated by MatNoble]
 
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\usepackage{mequation}
 
 %================================== 设置中文字体 ================================%
-\setCJKmainfont[Mapping = fullwidth-stop]{Source Han Sans SC}%------------------------------------------------设置正文为黑体
-\setCJKmonofont{Source Han Serif SC}%-------------------------------------------------设置等距字体
-\setCJKsansfont{KaiTi}%------------------------------------------------设置无衬线字体
+\setCJKmainfont[Mapping = fullwidth-stop]{Source Han Sans SC}%---------------设置正文为黑体
+\setCJKmonofont{Source Han Serif SC}                         %---------------设置等距字体
+% \setCJKsansfont{KaiTi}                                       %---------------设置无衬线字体
 \setCJKfamilyfont{zxzt}{FZShouJinShu-S10S}
 \setCJKfamilyfont{FZDH}{FZDaHei-B02S}
 %================================== 设置中文字体 ================================%
 
 %================================== 设置英文字体 ================================%
-%\setmainfont[Mapping=tex-text]{TeX Gyre Pagella}%--------------------------------英文衬线字体
-\setmainfont[Mapping=tex-text]{Helvetica}%--------------------------------英文衬线字体
+\setmainfont[Mapping=tex-text]{Helvetica}   %--------------------------------英文衬线字体
 \setsansfont[Mapping=tex-text]{Trebuchet MS}%------------------------------------英文无衬线字体
-\setmonofont[Mapping=tex-text]{Courier New}%-------------------------------------英文等宽字体
+\setmonofont[Mapping=tex-text]{Courier New} %-------------------------------------英文等宽字体
 \newfontfamily\Arial{Arial}
 % ================================== 设置英文字体 ================================%
 
-\usepackage{amsthm,amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
+\usepackage{amsthm,amsmath,amsfonts,amssymb,bm}   % 导入数学公式所需宏包
 \usepackage{helvet}
-\usepackage{color}			 %字体颜色支持
+\usepackage{color}			          % 字体颜色支持
 \usepackage{graphicx,hyperref,url}
 %\hypersetup{colorlinks,linkcolor=red} 
 \usepackage{metalogo}	% 非必须
@@ -48,14 +43,21 @@
 \usetikzlibrary{shadings}
 \usepackage{tabularx,multirow,multicol,longtable}
 \usepackage{tabu}
+\usepackage{subcaption}
 \setbeamertemplate{caption}[numbered]
 \setbeamerfont{caption}{size=\small}
+
+% 关于图片 graphicx
+% 如果图片没有指定后缀, 依次按下列顺序搜索
+\DeclareGraphicsExtensions{.eps,.pdf,.jpg,.png}
+% 设置图表搜索路径, 可以给图表文件夹取如下名字
+\graphicspath{{figures/}{figure/}{pictures/}%
+  {picture/}{pic/}{pics/}{image/}{images/}}
+
 %% 上文引用的包可按实际情况自行增删
 %%%%%%%%%%%%%%%%%%
 
 \beamertemplateballitem		%设置 Beamer 主题
-
-
 %%%
 %%% Inherit definitions from existing themes (DO NOT MODIFY THESE)
 %%%
@@ -104,7 +106,7 @@
 %%%
 
 % Background
-\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bg}{res/hust_background1}
+\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bg}{res/hust_background}
 \setbeamertemplate{background}{\pgfuseimage{bg}}
 
 % Colors
@@ -150,21 +152,12 @@
   \@tempdimb=6.4375ex%
     %\multiply\@tempdimb by\beamer@sectionmax%
     \pgfdeclareimage[height=.1\@tempdimb]{logo}{res/logo1.png}%
-    \pgfdeclareimage[height=.8\@tempdimb]{title_logo}{res/hust_title.png}%
+    \pgfdeclareimage[height=.7\@tempdimb]{title_logo}{res/hust_title.png}%
   \logo{\pgfuseimage{logo}}%
   \ifdim\@tempdimb>0pt%
     \advance\@tempdimb by 1.125ex%
-    \begin{beamercolorbox}[wd=.84\paperwidth,ht=\@tempdimb]{section in head/foot}%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=\@tempdimb,center]{section in head/foot}%
       \vbox to\@tempdimb{\vfil\insertsectionnavigationhorizontal{.5\textwidth}{\hskip0pt plus1filll}{}\vfil}%
-    \end{beamercolorbox}%
-    %% \begin{beamercolorbox}[wd=.4\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
-    %%   \vbox to\@tempdimb{\vfil\textbf{\footnotesize\insertshortinstitute~~}\vfil}%
-    %% \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.165\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
-      \vbox to\@tempdimb{\vfil\pgfuseimage{title_logo}\vfil}%
-    \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.1\paperwidth,ht=\@tempdimb,center]{subsection in head/foot}%
-      \vbox to\@tempdimb{\vfil\insertlogo\vfil\vfil}%
     \end{beamercolorbox}%
   \fi%
 }
@@ -205,8 +198,5 @@
     }%
     \hskip-\Gm@rmargin%
   }%
-%  \nointerlineskip
-%    \vskip-0.2pt
-%    \hbox to\textwidth{\hskip-\Gm@lmargin\pgfuseshading{beamer@topshade}\hskip-\Gm@rmargin}
-%    \vskip-2pt
 }
+
